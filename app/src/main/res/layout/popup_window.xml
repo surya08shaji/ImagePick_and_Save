@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/newFolderImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/new_folder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/newFolder"
+        app:layout_constraintBottom_toTopOf="@id/viewL"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/newFolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Folder"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@id/newFolderImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewL"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <View
+        android:id="@+id/viewL"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#1B000000"
+        app:layout_constraintTop_toBottomOf="@id/newFolder"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/localFolder"/>
+
+    <ImageView
+        android:id="@+id/localFolderImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/local_folder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewL"
+        app:layout_constraintEnd_toStartOf="@id/localFolder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/localFolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Local Folder"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@id/localFolderImage"
+        app:layout_constraintTop_toBottomOf="@id/viewL"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:focusable="true"
+        tools:ignore="UsingOnClickInXml" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
